@@ -26,6 +26,19 @@ yarn build:backend
 * Build and Run Image
 
 ```
-docker build . -t oamdev/backstage-plugin-kubevela
+docker build . -t wonderflow/backstage
 docker run -p 7007:7007 wonderflow/backstage
 ```
+
+## Use Entity Provider for Vela Integrations
+
+We will leverage the [external integrations](https://backstage.io/docs/features/software-catalog/external-integrations) mechanism and works as a `Custom Entity Providers`.
+
+We will run a [go sever as plugin](https://github.com/kubevela-contrib/backstage-plugin-kubevela) to connect to Kubernetes API and request vela applications, it provides an API endpoint for serving entities for backstage app.
+
+- If you want to test it, you need to [run it locally](https://github.com/kubevela-contrib/backstage-plugin-kubevela#install-and-run).
+- If you use this backstage as [KubeVela addon](https://github.com/kubevela/catalog/tree/master/experimental/addons/backstage), just replace the image and update the addon.
+
+As a result, we need to follow the [Creating an Entity Provider](https://backstage.io/docs/features/software-catalog/external-integrations#creating-an-entity-provider) guide to customize.
+
+
