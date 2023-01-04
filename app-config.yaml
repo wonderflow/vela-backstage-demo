@@ -35,7 +35,7 @@ backend:
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
   reading:
     allow:
-      - host: localhost:8080
+      - host: backstage-plugin-vela.vela-system:8080
 
 integrations:
   github:
@@ -107,8 +107,8 @@ catalog:
     #     - allow: [User, Group]
 
 vela:
-  host: "http://localhost:8080/"
+  host: "http://backstage-plugin-vela.vela-system:8080/"
   # frequency is the refresh rate for the Vela API, default to 60 seconds, the unit is seconds
   frequency: 60
   # timeout is the timeout limit for the Vela API, default to 600 seconds, the unit is seconds
-  timeout: 600
+  timeout: 60
