@@ -2,12 +2,39 @@
 
 This is your newly scaffolded Backstage App, Good Luck!
 
+## Run Locally
+
+### Configure the KubeVela Plugin Endpoint
+
+You need to run the [backstage-plugin-kubevela](https://github.com/kubevela-contrib/backstage-plugin-kubevela) first before running the backstage app.
+
+Configure the `vela.host` and `backend.reading.allow` below, pointing to the kubevela plugin endpoint.
+
+```
+# Backstage override configuration for your local development environment
+vela:
+  host: "http://47.254.33.41:32505"
+  # frequency is the refresh rate for the Vela API, default to 60 seconds, the unit is seconds
+  frequency: 30
+  # timeout is the timeout limit for the Vela API, default to 600 seconds, the unit is seconds
+  timeout: 60
+
+backend:
+  reading:
+    allow:
+      - host: 47.254.33.41:32505
+```
+
+### Start Backstage App
+
 To start the app, run:
 
 ```sh
 yarn install
 yarn dev
 ```
+
+Visiting by: "http://127.0.0.1:3000/catalog".
 
 ## Build Docker Image
 
