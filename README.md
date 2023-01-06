@@ -11,7 +11,6 @@ You need to run the [backstage-plugin-kubevela](https://github.com/kubevela-cont
 Configure the `vela.host` and `backend.reading.allow` below, pointing to the kubevela plugin endpoint.
 
 ```
-# Backstage override configuration for your local development environment
 vela:
   host: "http://47.254.33.41:32505"
   # frequency is the refresh rate for the Vela API, default to 60 seconds, the unit is seconds
