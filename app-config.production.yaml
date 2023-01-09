@@ -28,8 +28,16 @@ backend:
       #   ca: # if you have a CA file and want to verify it you can uncomment this section
       #     $file: <file-path>/ca/server.crt
 
+  reading:
+    allow:
+      - host: backstage-plugin-vela.vela-system:8080
+      - host: "*.githubusercontent.com"
+      - host: kubevela.io
+      - host: kubevela.net
+
 catalog:
   # Overrides the default list locations from app-config.yaml as these contain example data.
   # See https://backstage.io/docs/features/software-catalog/software-catalog-overview#adding-components-to-the-catalog for more details
   # on how to get entities into the catalog.
-  locations: []
+  rules:
+    - allow: [Domain, System, Component, API, Location, Template, User, Group]
