@@ -36,6 +36,9 @@ backend:
   reading:
     allow:
       - host: backstage-plugin-vela.vela-system:8080
+      - host: raw.githubusercontent.com
+      - host: kubevela.io
+      - host: kubevela.net
 
 integrations:
   github:
