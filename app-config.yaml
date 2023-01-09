@@ -78,7 +78,7 @@ catalog:
     entityFilename: catalog-info.yaml
     pullRequestBranchName: backstage-integration
   rules:
-    - allow: [Component, System, API, Resource, Location]
+    - allow: [Domain, System, Component, API, Location, Template, User, Group]
   locations:
     # Local example data, file locations are relative to the backend process, typically `packages/backend`
     - type: file
@@ -109,6 +109,6 @@ catalog:
 vela:
   host: "http://backstage-plugin-vela.vela-system:8080/"
   # frequency is the refresh rate for the Vela API, default to 60 seconds, the unit is seconds
-  frequency: 60
+  frequency: 300
   # timeout is the timeout limit for the Vela API, default to 600 seconds, the unit is seconds
-  timeout: 60
+  timeout: 300
