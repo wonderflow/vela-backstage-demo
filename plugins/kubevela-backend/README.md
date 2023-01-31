@@ -4,9 +4,10 @@ Welcome to the kubevela-backend backend plugin!
 
 This plugin provides an `Entity Provider` called `VelaProvider` to read KubeVela Applications.
 
-You will need to configure the providers in your catalog.ts file in your backstage backend:
+You will need to configure the providers in your backstage backend:
 
 ```typescript
+// packages/backend/src/plugins/catalog.ts
 import { VelaProvider } from '@internal/plugin-kubevela-backend'; // This name will be changed once npm reg is published
 
 export default async function createPlugin(
