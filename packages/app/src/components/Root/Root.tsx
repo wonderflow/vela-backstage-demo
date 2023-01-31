@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Icon } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import ExtensionIcon from '@material-ui/icons/Extension';
 import MapIcon from '@material-ui/icons/MyLocation';
@@ -26,6 +26,7 @@ import {
 } from '@backstage/core-components';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import { VelaLogo } from 'backstage-plugin-velaux';
 
 const useSidebarLogoStyles = makeStyles({
   root: {
@@ -73,6 +74,7 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
         <SidebarDivider />
         <SidebarScrollWrapper>
           <SidebarItem icon={MapIcon} to="tech-radar" text="Tech Radar" />
+          <SidebarItem icon={VelaLogo} to="velaux" text="VelaUX" />
         </SidebarScrollWrapper>
       </SidebarGroup>
       <SidebarSpace />
