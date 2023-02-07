@@ -1,1 +1,0 @@
-export { VelaProvider } from './VelaProvider';

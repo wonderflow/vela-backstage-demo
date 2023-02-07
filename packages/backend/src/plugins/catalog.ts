@@ -2,7 +2,7 @@ import { CatalogBuilder } from '@backstage/plugin-catalog-backend';
 import { ScaffolderEntitiesProcessor } from '@backstage/plugin-scaffolder-backend';
 import { Router } from 'express';
 import { PluginEnvironment } from '../types';
-import { VelaProvider } from '@internal/plugin-kubevela-backend';
+import { VelaProvider } from '@oamdev/plugin-kubevela-backend';
 
 export default async function createPlugin(
   env: PluginEnvironment,
