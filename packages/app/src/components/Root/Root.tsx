@@ -26,7 +26,7 @@ import {
 } from '@backstage/core-components';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import { VelaLogo } from 'backstage-plugin-velaux';
+import { VelaLogo } from '@oamdev/backstage-plugin-velaux';
 
 const useSidebarLogoStyles = makeStyles({
   root: {

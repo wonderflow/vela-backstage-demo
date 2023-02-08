@@ -33,7 +33,7 @@ import { AppRouter, FlatRoutes } from '@backstage/core-app-api';
 import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
-import { VelauxPage } from 'backstage-plugin-velaux';
+import { VelauxPage } from '@oamdev/backstage-plugin-velaux';
 
 const app = createApp({
   apis,
